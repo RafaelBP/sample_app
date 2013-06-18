@@ -2,7 +2,8 @@
 
 gem 'rails', '3.2.13'
 
-#Aways need this...
+gem 'nokogiri', '1.5.10'
+
 # Ruby racer
 gem 'therubyracer'
 
@@ -28,7 +29,7 @@ end
 gem 'jquery-rails', '2.0.2'
 
 group :test do
-  # gem 'capybara', '1.1.2'    # This uses nokogiri, and is failing during bundle.
+  gem 'capybara', '1.1.2'    # This uses nokogiri, and is failing during bundle.
 end
 
 
