@@ -2,6 +2,7 @@
 
 gem 'rails', '3.2.13'
 
+gem 'bootstrap-sass', '2.1'
 gem 'nokogiri', '1.5.10'
 
 # Ruby racer

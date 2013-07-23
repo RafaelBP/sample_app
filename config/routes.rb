@@ -1,10 +1,19 @@
 SampleApp::Application.routes.draw do
-  get "static_pages/home"          # --> Links with home method in static_pages_controller.rb
 
-  get "static_pages/help"          # --> Links with help method in static_pages_controller.rb
+root :to => 'static_pages#home'
+get   '/home'  , :controller => :static_pages, :action => :home
+match '/help'  , :to => 'static_pages#help'
+match '/about' , :to => 'static_pages#about'  #match ja cria about_path 
+match '/contact', :to => 'static_pages#contact'
+match('/signup', :to => 'users#new', :via => 'get')
 
-  get "static_pages/about"
+  # get "static_pages2/configuration" => "static_pages#help"
+  # get "static_pages2/configuration2", :controller => :static_pages, :action => :home
   
+
+  # get controller_name/action_name   --> This is the standard
+  # 
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
